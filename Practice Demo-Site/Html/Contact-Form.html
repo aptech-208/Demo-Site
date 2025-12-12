@@ -4,40 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - T-Shop</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Contact - Tech Gear Store</title>
+    <link rel="stylesheet" href="../Css/Contact-Form.css">
 </head>
 
 <body>
-
-    <section class="contact-wrapper">
-
-        <div class="contact-card">
-
-            <!-- LEFT IMAGE -->
-            <div class="contact-image">
-                <img src="https://cdn-icons-png.flaticon.com/512/1034/1034120.png" alt="Message Icon">
-            </div>
-
-            <!-- RIGHT FORM -->
-            <div class="contact-form-area">
-
-                <h2>Get in touch</h2>
-
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" rows="4"></textarea>
-
-                    <button type="submit">Send</button>
-                </form>
-
-            </div>
-
+    <!-- Header -->
+    <nav>
+        <ul>
+            <img src="../Media/logo3-removebg-preview.png" alt="">
+            <a href="#home" id="itm1">Home</a>
+            <a href="#about" id="itm2">About</a>
+            <a href="#products" id="itm3">Accessories</a>
+            <a href="#contact" id="itm4">Contact</a>
+        </ul>
+        <div class="snav" id="snav">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
+        <!-- <img src="../Media/logo2.png" alt=""> -->
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you</p>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Fill out the form and our team will get back to you within 24 hours.</p>
+
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        support@techgear.com
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div>
+                        <strong>Phone</strong><br>
+                        +1 (555) 123-4567
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <strong>Location</strong><br>
+                        123 Tech Street, Gaming City
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tech Gear Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            alert('Thank you for your message, ' + name + '! We\'ll get back to you soon.');
+
+            this.reset();
+        });
+    </script>
 </body>
 
 </html>
